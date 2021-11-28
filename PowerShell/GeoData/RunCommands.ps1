@@ -1,0 +1,4 @@
+ogr2ogr -f "MSSQLSpatial" "MSSQL:server=(local)\sqlserver2012;database=GeoData;trusted_connection=yes" "C:\Users\swright\Downloads\strtgi_essh_gb\data\railway_point.shp" -s_srs "EPSG:27700" -t_srs "EPSG:4326" -lco "GEOM_TYPE=geography" -lco "GEOM_Name=geog4326" -nln "ukdata.railwaypoint" -overwrite
+
+
+ogr2ogr -f "MSSQLSpatial" "MSSQL:server=(local)\sqlserver2008;database=WorkingData;trusted_connection=yes"  "C:\Workspaces\Visual Studio\2010\Projects\SQLSpatialLoader\SQLSpatialLoader\bin\Debug\filled_full_poly.kml" -nln "dbo.KMLFile" -t_srs "EPSG:4326" -lco "GEOM_TYPE=geography" -lco "GEOM_Name=geog4326" -overwrite
